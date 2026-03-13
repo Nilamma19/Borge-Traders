@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@theme {
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  
+  --color-copper-500: #b87333;
+  --color-copper-400: #d4956a;
+  --color-copper-300: #e8b8a0;
+  
+  --color-graphite-900: #1a1a1a;
+  --color-graphite-800: #2d2d2d;
+  --color-graphite-700: #404040;
+  --color-graphite-600: #595959;
+}
+
+/* Custom utilities and base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-900 text-slate-300 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-copper-500 text-white font-semibold rounded-lg hover:bg-copper-400 transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border-2 border-slate-400 text-slate-300 font-semibold rounded-lg hover:border-copper-500 hover:text-copper-500 transition-colors duration-300;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-white leading-tight;
+  }
+
+  .section-subheading {
+    @apply text-lg md:text-xl text-slate-400 leading-relaxed;
+  }
+
+  .card-base {
+    @apply bg-slate-800 border border-slate-700 rounded-xl p-6 md:p-8 hover:border-slate-600 transition-colors duration-300;
+  }
+}

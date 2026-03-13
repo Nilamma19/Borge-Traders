@@ -1,0 +1,23 @@
+/* App container */
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Remove default button styles */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift */
+body {
+  margin: 0;
+  padding: 0;
+}
